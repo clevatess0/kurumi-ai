@@ -1,0 +1,44 @@
+name: kurumi_ai
+description: "KurumiAI - Sesli, Groq destekli, Android'e derin erişimli akıllı asistan."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # --- UI / Animasyon / Tipografi ---
+  google_fonts: ^6.2.0
+  flutter_animate: ^4.5.0
+  # NOT: rive 0.14+ sürümü native C++ runtime'a geçtiği için eski API ile
+  # uyumsuzdur. 0.13 hattına sabitlenerek build kırılması önlenir.
+  rive: ^0.13.20
+
+  # --- Ses (STT / TTS) ---
+  speech_to_text: ^7.0.0
+  flutter_tts: ^4.2.0
+  permission_handler: ^11.3.0
+
+  # --- Ağ / Groq API ---
+  http: ^1.2.0
+
+  # --- Android Derin Erişim (Tools) ---
+  android_intent_plus: ^5.2.0
+  battery_plus: ^6.2.0
+  url_launcher: ^6.3.0
+
+  # --- Yerel Depolama (API key, ayarlar) ---
+  shared_preferences: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
